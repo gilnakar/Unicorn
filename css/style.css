@@ -72,7 +72,7 @@ html {
 }
 
 body  {
-  font-family: Merriweather, serif;
+  font-family: 'Helvetica', sans-serif;
   font-size: 1rem;
   line-height: 160%;
   *zoom: 1;
@@ -87,8 +87,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-  color: #145266;
-  font-family: Bree Serif, serif;
+  color: blue;
+  line-height: 1.6rem;
+  color:  #555;
+  margin-bottom: 10px;
 }
 
 h1{
@@ -111,14 +113,14 @@ h3{
   margin-bottom: 5px;
 }
 
-p {
-  line-height: 1.3rem;
+p{
+  line-height: 1.6rem;
   color:  #555;
   margin-bottom: 10px;
-  font-family: 'Merriweather';
 }
 span{
   color: #222;
+
 }
 
 
@@ -138,6 +140,9 @@ iframe{
 #QTY{
   width: 30px;
   line-height: 0.3em;
+}
+#PPRICE{
+  padding-left: 5px;
 }
 .main{
   margin: 20px 10px 0px 10px;
