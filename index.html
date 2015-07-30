@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" ng-app="myApp">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <meta charset="UTF-8">
+  <title>Netcarft Project</title>
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="js/controllers.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section class="main">
+  <div id="product" ng-controller = "MyController">
+
+    <div class="titlePrice">
+      <h1>{{a.title}}</h1>
+      <span id="PPRICE" >price: {{ a.price | currency }}</span>
+      <form id="quantity">
+        <span>Quantity</span>
+        <input type="text" value="" name="QTY" id="QTY" onKeyUp="multiply()" ng-model="a.qty" /><br />
+      </form>
+      </div>
+
+    <hr>
+
+    <img id="productPhoto" ng-src="images/{{a.title}}.jpg" alt="Photo of {{a.title}}">
+     
+    <div class="3dContainer" style="width: 624px; height:85%; overflow: hidden;">
+        <iframe src="{{a.model}}" width="700" height="440" style="position: relative; left: -10px; top: -40px">
+        </iframe>
+    </div>
+
+    <hr>
+    <p> {{ a.description_1 }} <a href="#" >Visit Unassigned Link!</a> </br>
+        {{ a.description_2 }}<a href="http://www.netcraft.co.il/" target="_blank">Visit Netcraft!</a>
+    </p>
+    <span id="TOTAL">Total: {{ (a.price * a.qty) | currency }} </span>
+
+  </div>
+</section>  
+  
+
+
+</body>
+</html>
