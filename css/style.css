@@ -146,7 +146,9 @@ iframe{
   display: none;
 }
 
-
+hr {
+  display: none;
+}
 
 /* Above smallish app elments style */
 
@@ -185,6 +187,7 @@ iframe{
 }
 
 hr {
+    display: block;
     border: 0;
     height: 1px;
     background: #333;
