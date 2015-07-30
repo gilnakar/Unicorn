@@ -35,8 +35,10 @@
     <p> {{ a.description_1 }} <a href="#" >Visit Unassigned Link!</a> </br>
         {{ a.description_2 }}<a href="http://www.netcraft.co.il/" target="_blank">Visit Netcraft!</a>
     </p>
-    <span id="TOTAL">Total: {{ (a.price * a.qty) | currency }} </span>
-
+      <div class="totalCheckout">
+      <span id="TOTAL">Total: {{ (a.price * a.qty) | currency }} </span>
+      <a href="#" class="button">Checkout <i class="icon-chevron-right"></i></a>
+    </div>
   </div>
 </section>  
   
