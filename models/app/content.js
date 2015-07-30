@@ -29,25 +29,25 @@ function init() {
 					document.body.insertBefore(contentElem, window.document.getElementById('footer'));
 				};
 				
-//Progress Bar		
-				var loaderElem = document.createElement( 'div' );
-				loaderElem.id = 'loader';
-				container = document.createElement( 'div' );
-				container.id = "container";
-				var circle = new ProgressBar.Circle(container, {
-					color: '#000000',
-					text: {
-						value: '0'
-							},
-					step: function(state, bar) {
-						bar.setText((bar.value() * 100).toFixed(0));
-					}
-				});
+// //Progress Bar		
+// 				var loaderElem = document.createElement( 'div' );
+// 				loaderElem.id = 'loader';
+// 				container = document.createElement( 'div' );
+// 				container.id = "container";
+// 				var circle = new ProgressBar.Circle(container, {
+// 					color: '#000000',
+// 					text: {
+// 						value: '0'
+// 							},
+// 					step: function(state, bar) {
+// 						bar.setText((bar.value() * 100).toFixed(0));
+// 					}
+// 				});
 
 				
-				loaderElem.appendChild( container );
-				document.body.appendChild(loaderElem);
-				loaderElem.style.display = "block";
+// 				loaderElem.appendChild( container );
+// 				document.body.appendChild(loaderElem);
+// 				loaderElem.style.display = "block";
 
 //camera
 				camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 10000 );
