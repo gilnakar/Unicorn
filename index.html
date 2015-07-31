@@ -18,8 +18,8 @@
       <h1>{{a.title}}</h1>
       <span id="PPRICE" >price: {{ a.price | currency }}</span>
       <form id="quantity" role="type in quantity">
-          <span>Quantity</span>
-          <input type="text" value="" name="QTY" id="QTY" onKeyUp="multiply()" ng-model="a.qty" placeholder="0" /><br />
+          <label>Quantity</label>
+          <input type="text" value="" name="QTY" id="QTY" onKeyUp="multiply()" ng-model="a.qty"  /><br />
       </form>
       </div>
 
