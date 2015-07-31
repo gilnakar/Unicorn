@@ -2,31 +2,32 @@
 <html lang="en" ng-app="myApp">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <head>
+  <title>Netcarft Job Project</title>
   <meta charset="UTF-8">
-  <title>Netcarft Project</title>
+  <meta name="Product Details" content="Product description price and ordering interface">
   <script src="lib/angular/angular.min.js"></script>
   <script src="js/controllers.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<section class="main">
+<section class="main" role="main">
   <div id="product" ng-controller = "MyController">
-
+    <a id="backToAll" role="back to previous list" href="#" target="_blank">Back to All</a>
     <div class="titlePrice">
       <h1>{{a.title}}</h1>
       <span id="PPRICE" >price: {{ a.price | currency }}</span>
-      <form id="quantity">
-        <span>Quantity</span>
-        <input type="text" value="" name="QTY" id="QTY" onKeyUp="multiply()" ng-model="a.qty" /><br />
+      <form id="quantity" role="type in quantity">
+          <span>Quantity</span>
+          <input type="text" value="" name="QTY" id="QTY" onKeyUp="multiply()" ng-model="a.qty" placeholder="0" /><br />
       </form>
       </div>
 
     <hr>
 
-    <img id="productPhoto" ng-src="images/{{a.title}}.jpg" alt="Photo of {{a.title}}">
+    <img id="productPhoto" role="product image" ng-src="images/{{a.title}}.jpg" alt="Photo of {{a.title}}">
      
-    <div class="3dContainer" style="width: 624px; height:85%; overflow: hidden;">
+    <div class="3dContainer" role="3D product model" style="width: 624px; height:85%; overflow: hidden;">
         <iframe src="{{a.model}}" width="700" height="440" style="position: relative; left: -10px; top: -40px">
         </iframe>
     </div>
@@ -37,9 +38,11 @@
     </p>
       <div class="totalCheckout">
       <span id="TOTAL">Total: {{ (a.price * a.qty) | currency }} </span>
-      <a href="#" class="button">Checkout <i class="icon-chevron-right"></i></a>
+      <button href="#" class="button">Checkout</button>
     </div>
+    <a id="backToAllBig" role="back to previous list" href="#" target="_blank">Back to All</a>
   </div>
+
 </section>  
   
 
