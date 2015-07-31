@@ -30,10 +30,16 @@
      
     <img class="product_image" role="product image" ng-src="images/{{a.title}}.jpg" alt="Photo of {{a.title}}">
     <div class="model_display" role="3D product model" style="width: 450px; height:85%; overflow: hidden;">
-      <iframe src="{{a.model}}" width="700" height="440" style="position: relative; left: -120px; top: -40px">
+      <iframe src="{{a.model}}"  width="700" height="440" style="position: relative; left: -120px; top: -40px" name="myiframe">
       </iframe>
     </div>
-   
+
+
+
+
+
+
+
 
 <!-- Detailed Product Description -->    
     <div class="product_description">
@@ -41,6 +47,11 @@
           {{ a.description_2 }}<a href="http://monsters.monstrous.com/unicorns.htm">More!</a>
       </p>
     </div>
+    <a href="{{a.model2}}" target="myiframe">Green</a>
+    <a href="{{a.model3}}" target="myiframe">Blue</a>
+    <a href="{{a.model4}}" target="myiframe">silver</a>
+    
+
 <hr>
 
 <!-- Toal Price and Checkout  -->     
