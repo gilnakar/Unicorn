@@ -21,8 +21,7 @@ time, mark, audio, video {
   vertical-align: baseline; }
 
 
-
-/* General elements Styles */  
+/* Base Styles */  
 
 html {
   line-height: 1; }
@@ -125,54 +124,77 @@ span{
 
 }
 
-
-/* Mobile First elments style */
-
-iframe{
-  display:none;
+/******************************/
+/*Mobile First elments style */
+/****************************/
+#product_section{
+  width:100%;
+  padding: 20px 10px 0px 10px;
 }
-#productPhoto{
-  width:250px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
+
+
+/*General Information Price and quantity*/
+
+.product_price_label{
+  padding-left: 5px;
 }
+
+.product_price{
+  color: #CC0000;
+  font-size: 1.2em;
+}
+
+#back_link_mobile{
+  float: right;
+}
+
+#back_link_desktop{
+  display: none;
+}
+
 #quantity{
   float: right;
 }
+
 #QTY{
   width: 30px;
   line-height: 0.3em;
 }
 
-#PPRICE{
-  padding-left: 5px;
+/*Visual Product Description */
+
+.product_image{
+  width:250px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
-#backToAll{
-  float: right;
-}
-#backToAllBig{
+
+.3dContainer{
   display: none;
 }
 
-.main{
-  width:100%;
-  padding: 20px 10px 0px 10px;
-}
-.3dContainer{
-  display: none;
+iframe{
+  display:none;
 }
 
 hr {
   display: none;
 }
-.totalCheckout{
+
+
+/*Detailed Product Description*/
+
+
+
+/*Toal Price and Checkout*/
+
+.total_checkout{
   width:100%;
-  padding-top: 30px;
- 
+  padding-top: 10px;
 }
 
-#TOTAL{
+.total_label{
   width:50px;
   border: none;
   font-family: arial;
@@ -181,45 +203,56 @@ hr {
   line-height: 50px;
 }
 
+.total_price{
+  color: black;
+  font-size: 1.2em;
+}
+
 /*checkout button style*/
-
   
-  button.button{
-    float: right;
-    border-radius: 15px;
-    padding: 10px 20px;
-    display: block;
-    font-family: arial;
-    font-size: 1.2em;
-    color:#7f7f7f;
-    text-decoration: none;
-    text-shadow:0px 1px 0px #fff;
-    border:1px solid #a7a7a7;
-    width: 120px;
-    margin:0px auto;
-    
-    box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
-    -webkit-transition:box-shadow 0.5s;
-  }
-  button.button i{
-    float: right;
-    margin-top: 2px;
-  }
-  button.button:hover{
-   background-color: #C7CAC7;
-   color: white;
- }
-  button.button:active{
-    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px white, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
-    background:-webkit-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%);
-  }
+button.checkout_button{
+  float: right;
+  border-radius: 15px;
+  padding: 10px 20px;
+  display: block;
+  font-family: arial;
+  font-size: 1.2em;
+  color:#7f7f7f;
+  text-decoration: none;
+  text-shadow:0px 1px 0px #fff;
+  border:1px solid #a7a7a7;
+  width: 120px;
+  margin:0px auto;
+  
+  box-shadow: 0px 2px 1px white inset, 0px -2px 8px white, 0px 2px 5px rgba(0, 0, 0, 0.1), 0px 8px 10px rgba(0, 0, 0, 0.1);
+  -webkit-transition:box-shadow 0.5s;
+
+}
+button.checkout_button i{
+  float: right;
+  margin-top: 2px;
+
+}
+
+button.checkout_button:hover{
+ background-color: #C7CAC7;
+ color: white;
+}
+
+button.checkout_button:active{
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5) inset, 0px -2px 20px white, 0px 1px 5px rgba(0, 0, 0, 0.1), 0px 2px 10px rgba(0, 0, 0, 0.1);
+  background:-webkit-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%);
+}
 
 
-/* For Desktop screens  elments style */
+
+/**************************************/
+/*For Desktop screens  elments style */
+/************************************/
 
 @media (min-width: 1200px) {
 
-.main{
+#product_section{
   position: absolute;
   width: 100%;
   height: 100%;
@@ -228,19 +261,23 @@ hr {
    left: 0;
 
 }
+/*General Information Price and quantity*/
 
-#product{
- width: 624px;
-   margin-left: auto;
-   margin-right: auto;
-   height: 395px;
+.product_information{
+  width: 624px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 395px;
 }
+
+
+/*Visual Product Description */
 
 iframe{
   display:inline-block;
 }
 
-#productPhoto{
+.product_image{
   display: none;
 }
 
@@ -257,21 +294,30 @@ hr {
     background:         linear-gradient(left, hsla(0,0%,0%,0) 0%, hsla(0,0%,0%,.75) 50%, hsla(0,0%,0%,0) 100%);
 }
 
-.totalCheckout{
+/*Detailed Product Description*/
+
+.product_description{
+
+}
+
+/*Toal Price and Checkout*/
+
+.total_checkout{
   width:50%;
   padding-top: 30px;
   float: right;
 }
-#backToAll{
+
+#back_link_mobile{
 display: none;
 }
 
-#backToAllBig{
+#back_link_desktop{
   float: left;
   display: inline-block;
   margin-top: 45px;
 }
-/* Base Styles */
+
 
 
 

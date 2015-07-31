@@ -11,36 +11,43 @@
 </head>
 <body>
 
-<section class="main" role="main">
-  <div id="product" ng-controller = "MyController">
-    <a id="backToAll" role="back to previous list" href="#" target="_blank">Back to All</a>
-    <div class="titlePrice">
-      <h1>{{a.title}}</h1>
-      <span id="PPRICE" >price: {{ a.price | currency }}</span>
-      <form id="quantity" role="type in quantity">
-          <label>Quantity</label>
-          <input type="text" value="" name="QTY" id="QTY" onKeyUp="multiply()" ng-model="a.qty"  /><br />
-      </form>
-      </div>
+<!-- General Information Price and quantity -->
 
+<section id="product_section" role="main">
+  <div class="product_information" ng-controller = "MyController">
+    <a id="back_link_mobile" role="back to previous list" href="#" target="_blank">Back to All</a>
+    <h1 class="product_title">{{a.title}}</h1>
+    <label class="product_price_label">price:</label>
+    <span class="product_price" >{{ a.price | currency }}</span>
+    <form id="quantity" role="type in quantity">
+        <label>Quantity</label>
+        <input type="text" value="" name="QTY" id="QTY" ng-model="a.qty"  /><br />
+    </form>
+
+<!-- Visual Product Description -->   
     <hr>
-
-    <img id="productPhoto" role="product image" ng-src="images/{{a.title}}.jpg" alt="Photo of {{a.title}}">
-     
+    <img class="product_image" role="product image" ng-src="images/{{a.title}}.jpg" alt="Photo of {{a.title}}">
     <div class="3dContainer" role="3D product model" style="width: 624px; height:85%; overflow: hidden;">
-        <iframe src="{{a.model}}" width="700" height="440" style="position: relative; left: -10px; top: -40px">
-        </iframe>
+      <iframe src="{{a.model}}" width="700" height="440" style="position: relative; left: -10px; top: -40px">
+      </iframe>
+    </div>
+    <hr>
+
+<!-- Detailed Product Description -->    
+    <div class="product_description">
+      <p> {{ a.description_1 }} <a href="#" >Visit Unassigned Link!</a> </br>
+          {{ a.description_2 }}<a href="http://www.netcraft.co.il/" target="_blank">Visit Netcraft!</a>
+      </p>
     </div>
 
-    <hr>
-    <p> {{ a.description_1 }} <a href="#" >Visit Unassigned Link!</a> </br>
-        {{ a.description_2 }}<a href="http://www.netcraft.co.il/" target="_blank">Visit Netcraft!</a>
-    </p>
-      <div class="totalCheckout">
-      <span id="TOTAL">Total: {{ (a.price * a.qty) | currency }} </span>
-      <button href="#" class="button">Checkout</button>
+<!-- Toal Price and Checkout  -->     
+    <div class="total_checkout">
+      <label class="total_label">Total: </label>
+      <span id="total_price">{{ (a.price * a.qty) | currency }} </span>
+      <button href="#" class="checkout_button" tabindex="0">Checkout</button>
     </div>
-    <a id="backToAllBig" role="back to previous list" href="#" target="_blank">Back to All</a>
+   
+    <a id="back_link_desktop" role="back to previous list" href="#" target="_blank">Back to All</a>
   </div>
 
 </section>  
