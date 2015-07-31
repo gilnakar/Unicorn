@@ -20,6 +20,8 @@ time, mark, audio, video {
   font-size: 100%;
   vertical-align: baseline; }
 
+
+
 /* General elements Styles */  
 
 html {
@@ -142,10 +144,7 @@ iframe{
   width: 30px;
   line-height: 0.3em;
 }
-input{
-  text-align: center;
-  vertical-align: middle;
-}
+
 #PPRICE{
   padding-left: 5px;
 }
@@ -181,9 +180,9 @@ hr {
   color:#7f7f7f;
   line-height: 50px;
 }
-/*big button style*/
 
- 
+/*checkout button style*/
+
   
   button.button{
     float: right;
@@ -215,18 +214,20 @@ hr {
     background:-webkit-linear-gradient(top, #d1d1d1 0%,#ECECEC 100%);
   }
 
-/* Above smallish app elments style */
+
+/* For Desktop screens  elments style */
 
 @media (min-width: 1200px) {
 
 .main{
   position: absolute;
-   top: 50%;
-   margin-top: -300px;/* half of #content height*/
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  margin-top: -350px;/* half of #content height*/
    left: 0;
-   width: 100%;
-}
 
+}
 
 #product{
  width: 624px;
@@ -241,9 +242,7 @@ iframe{
 
 #productPhoto{
   display: none;
-  
 }
-
 
 hr {
     display: block;
@@ -269,8 +268,8 @@ display: none;
 
 #backToAllBig{
   float: left;
-  display: block;
-  margin-top: 100px;
+  display: inline-block;
+  margin-top: 45px;
 }
 /* Base Styles */
 
