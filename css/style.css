@@ -79,7 +79,6 @@ body  {
   *zoom: 1;
 }
 
-
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Helvetica', sans-serif;
   font-weight: normal;
@@ -87,10 +86,12 @@ h1, h2, h3, h4, h5, h6 {
   
 }
 
-
 a{
   color: blue;
   line-height: 1.6rem;
+}
+a:visited{
+  color: gray;
 }
 
 h1{
@@ -158,6 +159,7 @@ span{
 #QTY{
   width: 30px;
   line-height: 0.3em;
+  text-align: right;
 }
 
 /*Visual Product Description */
