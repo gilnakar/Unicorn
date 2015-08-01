@@ -1,78 +1,82 @@
 <!doctype html>
 <html lang="en" ng-app="myApp">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <head>
   <title>Netcarft Job Project</title>
   <meta charset="UTF-8">
   <meta name="Product Details" content="Product description price and ordering interface">
+  <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
   <script src="lib/angular/angular.min.js"></script>
   <script src="js/controllers.js"></script>
   <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
-<!-- General Information Price and quantity -->
+  <!-- General Information Price and quantity -->
 
-<section id="product_section" role="main">
-   <div class="product_information" ng-controller = "MyController">
-    <hr>
-    <div class="genral_information">
-      <a id="back_link_mobile" role="back to previous list" href="#" target="_blank">Back to All</a>
-      <h1 class="product_title">{{a.title}}</h1>
-      <label class="product_price_label">Price:</label>
-      <span class="product_price" >{{ a.price | currency }}</span>
-      <form id="quantity" role="type in quantity">
+  <section id="product_section" role="main">
+    <div class="product_information" ng-controller="MyController">
+      <hr>
+      <div class="genral_information">
+        <a id="back_link_mobile" role="back to previous list" href="#" target="_blank">Back to All</a>
+        <h1 class="product_title">{{a.title}}</h1>
+        <label class="product_price_label">Price:</label>
+        <span class="product_price">{{ a.price | currency }}</span>
+        <form id="quantity" role="type quantity of products">
           <label>Quantity</label>
-          <input type="text" value="" name="QTY" id="QTY" ng-model="a.qty"  /><br />
-      </form>
-    </div>
-<!-- Visual Product Description -->   
-     
-    <img class="product_image" role="product image" ng-src="images/{{a.title}}.jpg" alt="Photo of {{a.title}}">
-    <div class="model_display" role="3D product model" style="width: 450px; height:85%; overflow: hidden;">
-      <iframe src="{{a.model}}"  width="700" height="440" style="position: relative; left: -120px; top: -40px" name="myiframe">
-      </iframe>
-    </div>
+          <input type="text" value="" name="QTY" id="QTY" ng-model="a.qty" />
+          <br />
+        </form>
+      </div>
+
+      <!-- Visual Product Description -->
+
+      <img class="product_image" role="product image" ng-src="images/{{a.title}}.jpg" alt="Photo of {{a.title}}">
+      <div class="model_display" role="3D product model" style="width: 450px; height:85%; overflow: hidden;">
+        <iframe src="{{a.model}}" width="700" height="440" style="position: relative; left: -120px; top: -40px" name="myiframe">
+        </iframe>
+      </div>
 
 
-<!-- Detailed Product Description -->    
-    <div class="product_description">
-      <p> {{ a.description_1}} <a href="#" >Visit!</a> </br>
+      <!-- Detailed Product Description -->
+
+      <div class="product_description">
+        <p> {{ a.description_1}} <a href="#">Visit!</a> </br>
           {{ a.description_2 }}<a href="http://monsters.monstrous.com/unicorns.htm">More!</a>
-      </p>
+        </p>
+      </div>
+
+      <!-- Model Material Selectors -->
+
+      <div class="material_selection">
+        <a href="{{a.model2}}" target="myiframe">
+          <label id="gold_model" title="Gold"> </label>
+        </a>
+        <a href="{{a.model3}}" target="myiframe">
+          <label id="marble_model" title="Marble"> </label>
+        </a>
+        <a href="{{a.model}}" target="myiframe">
+          <label id="white_model" title="White"> </label>
+        </a>
+
+      </div>
+
+      <hr>
+
+      <!-- Toal Price and Checkout  -->
+
+      <div class="total_checkout">
+        <label class="total_label">Total: </label>
+        <span id="total_price">{{ (a.price * a.qty) | currency }} </span>
+        <button href="#" class="checkout_button" tabindex="0">Checkout</button>
+      </div>
+      <a id="back_link_desktop" role="back to previous list" href="#" target="_blank">Back to All</a>
     </div>
 
-<!-- Model Material Selectors -->     
-    <div class="material_selection">
-      <a href="{{a.model2}}" target="myiframe">
-        <label id="gold_model" title="Gold"> </label>
-      </a>
-      <a href="{{a.model3}}" target="myiframe">
-        <label id="marble_model" title="Marble"> </label>
-      </a>
-      <a href="{{a.model}}" target="myiframe">
-        <label id="white_model" title="White"> </label>
-      </a>
-      
-    </div>
-
-<hr>
-
-<!-- Toal Price and Checkout  -->     
-    <div class="total_checkout">
-      <label class="total_label">Total: </label>
-      <span id="total_price">{{ (a.price * a.qty) | currency }} </span>
-      <button href="#" class="checkout_button" tabindex="0">Checkout</button>
-    </div>
-
-   
-    <a id="back_link_desktop" role="back to previous list" href="#" target="_blank">Back to All</a>
-
-  </div>
- 
-</section>  
-  
-
+  </section>
 
 </body>
+
 </html>
