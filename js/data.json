@@ -3,8 +3,8 @@
     "price":30.95,
     "model":"models/model1/unicorn.html",
     "model2":"models/model2/unicorn2.html",
-    "model3":"models/model3/blue.html",
-    "model4":"models/model4/silver.html",
+    "model3":"models/model3/unicorn3.html",
+    "model4":"models/model4/unicorn4.html",
     "description_1" :"The unicorn is a mythical creature. Strong, wild, and fierce, it was impossible to tame by man.",
     "description_2" :"The unicorn is an archetypal monster, present both in eastern and western mythology. In the Bible, God is said to have the strength of a unicorn. "
   }
