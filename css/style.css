@@ -300,16 +300,29 @@ iframe{
   width: 50%;
   float: right;
   padding: 10px 10px 10px 0;
-
 }
 
 .material_selection a{
+  width: 50px;
+  height: 50px;
+}
+
+.material_selection a label{
+  width:100%;
+  border:1px solid black;
   text-decoration: none;
   margin-right: 20px;
   padding-right: 20px;
- 
-
 }
+
+#gold_model{
+  background-color: gold;
+}
+
+#marble_model{
+  background-color: #e6e4d8;
+}
+ 
 
 .product_image{
   display: none;
