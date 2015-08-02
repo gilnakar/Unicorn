@@ -43,8 +43,8 @@
       <!-- Detailed Product Description -->
 
       <div class="product_description">
-        <p> {{ a.description_1}} <a href="#">Visit!</a> </br>
-          {{ a.description_2 }}<a href="http://monsters.monstrous.com/unicorns.htm">More!</a>
+        <p> {{ a.description_1}} <a href="{{ a.link_1 }}">{{ a.link_1_text }}</a> </br>
+          {{ a.description_2 }}<a href="{{ a.link_2 }}" target="_blank" >{{ a.link_2_text }}</a>
         </p>
       </div>
 
