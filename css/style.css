@@ -93,6 +93,9 @@ a{
 a:visited{
   color: gray;
 }
+.red_word{
+  color:red;
+}
 
 h1{
   color:  #444;
