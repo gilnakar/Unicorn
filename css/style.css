@@ -351,6 +351,11 @@ hr {
 
 }
 
+.product_description p{
+  display: inline;
+
+}
+
 /*Toal Price and Checkout*/
 
 .total_checkout{

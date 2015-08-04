@@ -9,6 +9,6 @@
     "link_2":"http://monsters.monstrous.com/unicorns.htm",
     "link_1_text":"visit!",
     "link_2_text":"More",
-    "description_1" :"The unicorn is a mythical creature. Strong, wild, and fierce, it was impossible to tame by man.",
-    "description_2" :"The unicorn is an archetypal monster, present both in eastern and western mythology. In the Bible, God is said to have the strength of a unicorn. "
+    "description_1" :"The <span style='color: #F0F8FF;'>unicorn</span> is a <u>mythical</u> creature. Strong, wild, and fierce, it was impossible to tame by man.",
+    "description_2" :"</br>The unicorn is an archetypal monster, present both in <u>eastern</u> and western mythology. In the <del>Bible</del>, God is said to have the strength of a unicorn. "
   }

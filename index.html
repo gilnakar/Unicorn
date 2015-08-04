@@ -8,7 +8,9 @@
   <meta name="Product Details" content="Product description price and ordering interface">
   <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript"></script>
   <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular-sanitize/angular-sanitize.js"></script>
   <script src="js/controllers.js"></script>
+  
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -43,9 +45,12 @@
       <!-- Detailed Product Description -->
 
       <div class="product_description">
-        <p> {{ a.description_1}} <a href="{{ a.link_1 }}">{{ a.link_1_text }}</a> </br>
-          {{ a.description_2 }}<a href="{{ a.link_2 }}" target="_blank" >{{ a.link_2_text }}</a>
-        </p>
+        <p ng-bind-html="a.description_1"></p>
+        <a href="{{a.link_2}}">More!</a>
+        </br>
+        <span ng-bind-html="a.description_2"></span>
+        <a href="{{a.link_1}}">Visit!!</a>
+
       </div>
 
       <!-- Model Material Selectors -->
