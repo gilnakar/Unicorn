@@ -25,7 +25,7 @@
         <a id="back_link_mobile" role="back to previous list" href="#" target="_blank">Back to All</a>
         <h1 class="product_title">{{a.title}}</h1>
         <label class="product_price_label">Price:</label>
-        <span class="product_price">{{ a.price | currency }}</span>
+        <span class="product_price">{{ a.price |  currency:"₪" }}</span>
         <form id="quantity" role="type quantity of products">
           <label>Quantity</label>
           <input type="text" value="" name="QTY" id="QTY" ng-model="a.qty" />
@@ -72,7 +72,7 @@
 
       <div class="total_checkout">
         <label class="total_label">Total: </label>
-        <span id="total_price">{{ (a.price * a.qty) | currency }} </span>
+        <span id="total_price">{{ (a.price * a.qty) |  currency:"₪" }} </span>
         <button href="#" class="checkout_button" tabindex="0">Checkout</button>
       </div>
       <a id="back_link_desktop" role="back to previous list" href="#" target="_blank">Back to All</a>
